@@ -17,8 +17,8 @@ Produce a new, readable modern-English translation directly from the Greek. Pres
 ## Work plan
 
 1. **Ingest and index:** retain the XML as the fixed baseline; extract all ordered Stephanus section milestones and paragraph/sentence identifiers into a coverage checklist.
-2. **Pilot:** translate 57a–60c. Set voice, sentence length, treatment of dialogue, and initial terminology choices. Review the pilot before scaling.
-3. **Draft in batches:** proceed in about 8–12 batches, grouped by argument boundaries and roughly 5–8 Stephanus pages. Keep Greek and English aligned by section and paragraph.
+2. **Set shared conventions:** settle voice, sentence length, treatment of dialogue, and initial terminology choices before parallel drafting. Use a short sample from 57a–60c if needed to establish these conventions.
+3. **Draft in parallel batches:** use the contiguous ranges in `translation-batches.md`; each batch has a separate output file and named Stephanus boundaries. Keep Greek and English aligned by section and paragraph.
 4. **Consistency review:** update the terminology ledger, check references and speaker turns, and revisit ambiguity decisions across the whole dialogue.
 5. **Final review:** read against the Greek for argument fidelity, omissions, negations, connective logic, tone, and English fluency; close all unresolved flags or document them explicitly.
 
@@ -51,4 +51,4 @@ These checks establish coverage and consistency; they cannot certify semantic ac
 
 ## Scale estimate
 
-This is a full-length dialogue and a multi-session translation project. A pilot plus roughly 8–12 drafting batches and two whole-work review passes is a reasonable starting scope. Batch sizes should be adjusted after inspecting actual section lengths and argument transitions.
+This is a full-length dialogue and a multi-session translation project. The initial work map has ten nonoverlapping batches and calls for two whole-work review passes. Batch sizes may be adjusted after comparing actual text volume; Stephanus section counts alone do not guarantee equal workloads.
