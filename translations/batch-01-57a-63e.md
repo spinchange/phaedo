@@ -52,7 +52,7 @@
 
 ### 59b
 
-**Echecrates:** You know the man and his ways.
+**Phaedo (to Echecrates):** You know the man and his ways.
 
 **Echecrates:** Of course.
 
