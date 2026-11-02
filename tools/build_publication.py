@@ -80,7 +80,7 @@ main{{min-width:0}}.intro{{font-size:19px;color:#46534a;margin:0 0 46px}}.passag
 @media(max-width:740px){{.layout{{display:block;padding:22px 20px}}aside{{position:relative;top:auto;max-height:none;margin-bottom:30px}}.toc{{grid-template-columns:repeat(8,1fr)}}body{{font-size:17px}}}}
 @media print{{aside,.download{{display:none}}.layout{{display:block;max-width:unset}}body{{font-size:11pt}}.passage{{break-inside:avoid}}}}
 </style></head><body>
-<header class="mast"><small>Plato · <a href="https://en.wikipedia.org/wiki/Stephanus_pagination" target="_blank" rel="noopener noreferrer" title="What Stephanus references mean">Stephanus</a> 57a–118a</small><h1><em>Phaedo</em></h1><p class="subtitle">A New Translation</p><p class="byline">Translated directly from the Greek · 2026</p><a class="download" href="phaedo.epub" download>Download the EPUB</a><section class="cast" aria-label="Characters"><div class="cast-label">Characters</div><p class="cast-list">Socrates · Phaedo (narrator) · Echecrates · Crito · Simmias · Cebes · Apollodorus · Xanthippe · the prison attendant</p></section></header>
+<header class="mast"><small>Plato · <a href="https://en.wikipedia.org/wiki/Stephanus_pagination" target="_blank" rel="noopener noreferrer" title="What Stephanus references mean">Stephanus</a> 57a–118a</small><h1><em>Phaedo</em></h1><p class="subtitle">A New Translation</p><p class="byline">Translated directly from the Greek · November 2, 2026</p><a class="download" href="phaedo.epub" download>Download the EPUB</a><section class="cast" aria-label="Characters"><div class="cast-label">Characters</div><p class="cast-list">Socrates · Phaedo (narrator) · Echecrates · Crito · Simmias · Cebes · Apollodorus · Xanthippe · the prison attendant</p></section></header>
 <div class="layout"><aside><h2>Contents · Stephanus</h2><nav class="toc" aria-label="Stephanus sections">{toc}</nav></aside>
 <main><p class="intro">Socrates’ final day, told by Phaedo: a dialogue on philosophy, the soul, and the meaning of death. Select a Stephanus reference to move through the text.</p>{html_sections}</main></div>
 <footer>Translation based on the Greek text edited by John Burnet, <em>Platonis Opera</em>, vol. 1 (Oxford Classical Texts), as represented in the Perseus Digital Library. Stephanus references follow the source text. Translation project, 2026.<br>Errata and corrections: <a href="mailto:errata@spinchange.com">errata@spinchange.com</a></footer>
@@ -96,11 +96,15 @@ main{{min-width:0}}.intro{{font-size:19px;color:#46534a;margin:0 0 46px}}.passag
     subtitle_font_path = fonts / "georgia.ttf"
     title_font = ImageFont.truetype(str(title_font_path), 112) if title_font_path.exists() else ImageFont.load_default(size=112)
     subtitle_font = ImageFont.truetype(str(subtitle_font_path), 38) if subtitle_font_path.exists() else ImageFont.load_default(size=38)
-    title_text, subtitle_text = "Phaedo", "A New Translation"
+    title_text, subtitle_text, date_text = "Phaedo", "A New Translation", "November 2, 2026"
     title_box = draw.textbbox((0, 0), title_text, font=title_font)
     subtitle_box = draw.textbbox((0, 0), subtitle_text, font=subtitle_font)
+    date_font_path = fonts / "arial.ttf"
+    date_font = ImageFont.truetype(str(date_font_path), 23) if date_font_path.exists() else ImageFont.load_default(size=23)
+    date_box = draw.textbbox((0, 0), date_text, font=date_font)
     draw.text(((1200 - (title_box[2] - title_box[0])) / 2, 228 - title_box[1]), title_text, fill="#202923", font=title_font)
     draw.text(((1200 - (subtitle_box[2] - subtitle_box[0])) / 2, 370 - subtitle_box[1]), subtitle_text, fill="#627066", font=subtitle_font)
+    draw.text(((1200 - (date_box[2] - date_box[0])) / 2, 436 - date_box[1]), date_text, fill="#627066", font=date_font)
     card.save(OUT / "social-card.png", format="PNG", optimize=True)
 
     css = "body{font-family:serif;line-height:1.5;margin:5%;} h1{font-size:2em;} h2{font-family:sans-serif;font-size:1em;margin-top:2em;} p{margin:0 0 1em;}"
