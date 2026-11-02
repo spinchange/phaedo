@@ -1,6 +1,8 @@
 # Phaedo Translation Batches
 
-Ranges below use the exact Stephanus section milestones in the local Perseus/Burnet XML. They are contiguous, nonoverlapping, and cover 57a–118a (310 section milestones). Assign one agent per batch and have each return only the named output file. Batch boundaries follow the dialogue's major turns and arguments; section size varies, so this is a practical division rather than equal word counts.
+Ranges below use the exact Stephanus section milestones in the local Perseus/Burnet XML. They are contiguous, nonoverlapping, and cover 57a–118a (310 section milestones). Batch boundaries follow the dialogue's major turns and arguments; section size varies, so this is a practical division rather than equal word counts.
+
+For the current progress and next parallel assignments, use `project-status.md` and `parallel-agent-handoff.md`. Batches 1–2 are fidelity reviewed; batch 3 is drafted and awaits fidelity review; batches 4–10 need first drafts.
 
 | Batch | Stephanus range (inclusive) | Main content | Output file |
 |---|---|---|---|

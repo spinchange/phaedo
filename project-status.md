@@ -1,15 +1,15 @@
 # Phaedo Translation: Project Status
 
-Updated 2026-11-02 from the repository and worktree state.
+Updated 2026-11-02 from the repository and worktree state. Reviewed project setup and batches 1–3 were consolidated in commit `645c30a`.
 
 ## Current state
 
 - Source text and project scope are in the main checkout. The source XML is the fixed baseline; do not edit it.
-- Shared style is drafted in `style-sample-57a-60c.md`. It is currently untracked in the main checkout.
+- Shared style is drafted in `style-sample-57a-60c.md` and committed.
 - Three translation drafts have been copied into `translations/` in the main checkout. The original worktree copies remain in place; batch 3's worktree copy is the unrevised draft, so the main-checkout copy is authoritative.
 - A working glossary and decision log are in the main checkout.
 - No translation files for batches 4–10 were found.
-- All section headings in batches 1–3 now match their expected source sequences exactly. Content and fidelity review remains pending.
+- All section headings in batches 1–3 match their expected source sequences exactly. Batches 1–2 have been fidelity reviewed; batch 3 still needs fidelity review.
 
 ## Draft inventory
 
@@ -22,16 +22,15 @@ Updated 2026-11-02 from the repository and worktree state.
 
 ## Recommended next steps
 
-1. Fidelity-review batch 3, including the repaired section boundaries.
-2. Assign batches 4–10 using the existing map and handoff instructions. Keep each agent to one output file.
-3. After drafting, reconcile queries and terminology, review every batch seam, and read the full translation against the Greek.
+1. In a new session, use `parallel-agent-handoff.md` to run the batch 3 fidelity review alongside translation of batches 4–10.
+2. Reconcile queries and terminology, review every batch seam, and read the full translation against the Greek.
 
 ## Handoff guardrails
 
 - Keep `phaedo-burnet-perseus-grc2.xml` unchanged.
 - Agents should work only on their assigned batch file and return queries and proposed terminology at the end of that file.
 - Treat all current batch files as independent drafts until their fidelity review is complete; heading coverage and seam review do not mean the translation is checked.
-- Main branch was clean before this status file except for the untracked `.worktrees/` directory and style sample.
+- Commit `645c30a` contains the reviewed project setup and batches 1–3. The `.worktrees/` directory is local scratch space and is ignored.
 - Heading audit on 2026-11-02: batches 1, 2, and 3 contain all 32, 30, and 15 expected headings respectively, with no duplicates or out-of-order labels. Batch 3 headings were also repositioned within the dialogue to follow the Greek milestone boundaries, including continuations split across sections.
 - Fidelity review on 2026-11-02: batches 1–2 checked against the Greek. Corrected the 59b speaker label (Echecrates), tightened the 67b purity line, and resolved the 62a wording editorially by preserving its apparent “never” / “at some time for someone” tension with an explanatory note.
 - Source integrity rechecked on 2026-11-02: SHA-256 remains `baf65d8cb72f857e80ea4e2326a6808c1cf3cbc8df7b4340f14e79d142227d98`.
