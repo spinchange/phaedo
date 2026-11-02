@@ -7,6 +7,8 @@ import zipfile
 from datetime import date
 from pathlib import Path
 
+from PIL import Image, ImageDraw, ImageFont
+
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "publication"
@@ -56,6 +58,15 @@ def main() -> None:
     page = f'''<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="description" content="A new modern-English translation of Plato's Phaedo, with Stephanus references.">
+<meta property="og:type" content="website"><meta property="og:title" content="Phaedo: A New Translation">
+<meta property="og:description" content="A new modern-English translation of Plato’s Phaedo.">
+<meta property="og:url" content="https://spinchange.com/phaedo/">
+<meta property="og:image" content="https://spinchange.com/phaedo/social-card.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Phaedo — A New Translation">
+<meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Phaedo: A New Translation">
+<meta name="twitter:description" content="A new modern-English translation of Plato’s Phaedo.">
+<meta name="twitter:image" content="https://spinchange.com/phaedo/social-card.png">
 <title>{TITLE}: {SUBTITLE}</title><style>
 :root{{--ink:#202923;--muted:#627066;--paper:#fbfaf6;--green:#315b49;--line:#d9ded6;--serif:Georgia,'Times New Roman',serif}}
 *{{box-sizing:border-box}}body{{margin:0;background:var(--paper);color:var(--ink);font:18px/1.75 var(--serif)}}
@@ -77,6 +88,20 @@ main{{min-width:0}}.intro{{font-size:19px;color:#46534a;margin:0 0 46px}}.passag
 </body></html>'''
     (OUT / "phaedo.html").write_text(page, encoding="utf-8")
     (OUT / "index.html").write_text(page, encoding="utf-8")
+    card = Image.new("RGB", (1200, 630), "#e9eee8")
+    draw = ImageDraw.Draw(card)
+    draw.rounded_rectangle((42, 42, 1158, 588), radius=18, outline="#cfd8ce", width=2)
+    fonts = Path("C:/Windows/Fonts")
+    title_font_path = fonts / "georgiai.ttf"
+    subtitle_font_path = fonts / "georgia.ttf"
+    title_font = ImageFont.truetype(str(title_font_path), 112) if title_font_path.exists() else ImageFont.load_default(size=112)
+    subtitle_font = ImageFont.truetype(str(subtitle_font_path), 38) if subtitle_font_path.exists() else ImageFont.load_default(size=38)
+    title_text, subtitle_text = "Phaedo", "A New Translation"
+    title_box = draw.textbbox((0, 0), title_text, font=title_font)
+    subtitle_box = draw.textbbox((0, 0), subtitle_text, font=subtitle_font)
+    draw.text(((1200 - (title_box[2] - title_box[0])) / 2, 228 - title_box[1]), title_text, fill="#202923", font=title_font)
+    draw.text(((1200 - (subtitle_box[2] - subtitle_box[0])) / 2, 370 - subtitle_box[1]), subtitle_text, fill="#627066", font=subtitle_font)
+    card.save(OUT / "social-card.png", format="PNG", optimize=True)
 
     css = "body{font-family:serif;line-height:1.5;margin:5%;} h1{font-size:2em;} h2{font-family:sans-serif;font-size:1em;margin-top:2em;} p{margin:0 0 1em;}"
     nav_items, manifest_items, spine_items = [], [], []
