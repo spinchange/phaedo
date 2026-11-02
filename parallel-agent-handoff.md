@@ -2,6 +2,8 @@
 
 Use this file to restart the project in a new session and fan out the unfinished work.
 
+> **Archived handoff:** The assignments below were completed and coordinator-reviewed on 2026-11-02. For the current inventory and review status, see `project-status.md`. The original prompts and wave plan are retained as a record of the parallel work.
+
 ## Baseline
 
 - Start from the current `master` HEAD. The reviewed batches and project setup are in commit `645c30a` (`Add reviewed Phaedo translation batches 1-3`); the handoff and status files may be in a later commit.

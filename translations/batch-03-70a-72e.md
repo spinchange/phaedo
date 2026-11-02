@@ -146,7 +146,7 @@
 
 ### 72c
 
-**Socrates (continuing):** “—would make the story of Endymion pointless, and he would be nowhere to be seen, because everything else would have suffered the same fate as him: sleeping. And if everything combined but nothing separated, Anaxagoras’ saying ‘all things together’ would soon come true.
+**Socrates (continuing):** “—would make the story of Endymion nonsense, and he would be nowhere to be seen, because everything else would have suffered the same fate as him: sleeping. And if everything combined but nothing separated, Anaxagoras’ saying ‘all things together’ would soon come true.
 
 “The same applies, my dear Cebes, if everything that shared in life were to die, and, once dead, remained in that state and did not come back to life. Wouldn’t everything inevitably end up—”
 
@@ -165,6 +165,8 @@
 The Greek text marks the following words as deleted, so they are not translated here: “and for the good ones it is better, for the bad ones worse.”
 
 **Cebes:** “And indeed, Socrates, even according to that other argument you often make, if it is true—that learning is in fact nothing other than recollection—then surely we must have learned at some earlier time what we now recollect.”
+
+**Socrates (continuing, as reported by Phaedo):** “This, however, is impossible unless our soul existed somewhere before it came to be in this human form—”
 ## Terminology and style notes
 
 - **ψυχή (*psychē*):** “soul,” including in Cebes’ concern about whether it survives bodily death.
